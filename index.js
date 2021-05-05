@@ -9,7 +9,7 @@ const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster
 
 require('dotenv').config()
 
-const port = 5000
+const port =process.env.PORT || 5000
 
 const app = express()
 
@@ -80,4 +80,4 @@ app.get('/', (req, res) => {
     res.send('Hello World!')
 })
 
-app.listen(port)
+app.listen(process.env.PORT || port)
