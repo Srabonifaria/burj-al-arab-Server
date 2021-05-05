@@ -18,6 +18,10 @@ app.use(bodyParser.json());
 
 
 
+app.get('/', (req, res) => {
+    res.send('Hello World!')
+})
+
 // var admin = require("firebase-admin");
 
 var serviceAccount = require("./configs/burj-al-arab23-firebase-adminsdk-m4xxe-0671312ec9.json");
@@ -76,8 +80,6 @@ client.connect(err => {
 
 
 
-app.get('/', (req, res) => {
-    res.send('Hello World!')
-})
+
 
 app.listen(process.env.PORT || port)
