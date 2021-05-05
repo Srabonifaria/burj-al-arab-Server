@@ -1,7 +1,7 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors');
-// const admin = require('firebase-admin');
+const admin = require('firebase-admin');
 const MongoClient = require('mongodb').MongoClient;
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.mfj8i.mongodb.net/burjAlArab?retryWrites=true&w=majority`;
 
@@ -18,13 +18,13 @@ app.use(bodyParser.json());
 
 
 
-// var admin = require("firebase-admin");
+var admin = require("firebase-admin");
 
-// var serviceAccount = require("./configs/burj-al-arab23-firebase-adminsdk-m4xxe-0671312ec9.json");
+var serviceAccount = require("./configs/burj-al-arab23-firebase-adminsdk-m4xxe-0671312ec9.json");
 
-// admin.initializeApp({
-//     credential: admin.credential.cert(serviceAccount)
-// });
+admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount)
+});
 
 
 
