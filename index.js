@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 
 
 
-var admin = require("firebase-admin");
+// var admin = require("firebase-admin");
 
 var serviceAccount = require("./configs/burj-al-arab23-firebase-adminsdk-m4xxe-0671312ec9.json");
 
